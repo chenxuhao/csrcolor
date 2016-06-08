@@ -1,0 +1,29 @@
+Graph Coloring (GCO) partitions the vertices of a graph such that
+no two adjacent matrices share the same color.  
+
+3-step graph coloring framework: 
+1) Graph partitioning which partitions graph into subgraphs and 
+identifies boundary vertices, 
+2) graph coloring & conflicts detection which colors the graph using 
+the specified heuristic, e.g. FF, and identifies color conflicts, and
+3) sequential conflicts resolution which goes back to CPU and resolves 
+the conflicts.
+
+
+useage:
+	./gc 0 0 0 0 0 0 0 <nblocks> <blocksize> <graph> <weighted> n
+	
+	see run for details
+	
+
+note:
+
+program can only read mtx graph
+
+
+References:
+
+A. V. P. Grosset, P. Zhu, S. Liu, S. Venkatasubramanian, and M. Hall,
+“Evaluating graph coloring on gpus,” in Proceedings of the 16th ACM
+Symposium on Principles and Practice of Parallel Programming, 2011,
+pp. 297–298.

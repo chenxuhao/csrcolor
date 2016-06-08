@@ -1,0 +1,12 @@
+program read mtx or gr graph and store its information in CSR format
+
+and write colors of all vertices to "color.txt"
+
+usage:
+	./csrcolor <graph>
+	
+Reference:
+
+NVIDIA cuSPARSE Reorderings Reference
+http://docs.nvidia.com/cuda/cusparse/index.html#cusparse-reorderings-reference
+

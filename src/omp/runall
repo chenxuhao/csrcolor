@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#filename=rmat1.gr
+DIR=/home/lpf/workspace/lonestargpu-2.0/apps/coloring/input
+APP=./color_greedy-omp
+
+SERIAL=./color_greedy-s
+
+#NUM_THREADS=16
+
+for input in `ls $DIR`
+do
+#	echo $SERIAL 1 $DIR/$input
+#	$SERIAL 1 $DIR/$input
+
+	for ((NUM_THREADS=2; NUM_THREADS<=24; NUM_THREADS+=2))
+	do
+#		echo $APP $NUM_THREADS $DIR/$input
+		$APP $NUM_THREADS $DIR/$input
+	done
+done

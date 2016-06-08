@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DIR=../input
+
+for input in `ls $DIR`
+do
+	for APP in './datadriven_naive-32' './datadriven_naive-64' './datadriven_naive-128' './datadriven_naive-256' './datadriven_naive-512' './datadriven_naive-1024' './datadriven_ldg-32' './datadriven_ldg-64' './datadriven_ldg-128' './datadriven_ldg-256' './datadriven_ldg-512' './datadriven_ldg-1024'
+	do
+		echo $APP $DIR/$input
+		$APP $DIR/$input
+	done
+done

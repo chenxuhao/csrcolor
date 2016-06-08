@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#filename=rmat1.gr
+DIR=../input
+APP=./greedy
+
+for input in `ls $DIR`
+do
+	echo $APP $DIR/$input
+	$APP $DIR/$input
+	#echo $DIR/$input
+done

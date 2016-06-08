@@ -1,0 +1,18 @@
+Place a symlink to the top-level cusp directory in current dir. Assuming
+the top-level CUB directory is $CUSPDIR:
+
+$ ln -s $CUSPDIR
+
+program read mtx graph with the cusplibrary
+
+and write colors of all vertices to "color.txt"
+
+usage:
+	./vc <graph>
+	
+Reference:
+
+S. Dalton, N. Bell, L. Olson, and M. Garland, “Cusp:
+Generic parallel algorithms for sparse matrix and graph
+computations,” 2014, version 0.5.0.
+http://cusplibrary.github.io/

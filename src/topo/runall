@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DIR=../input
+
+for input in `ls $DIR`
+do
+	for APP in './topodriven_naive' './topodriven_ldg'
+	do
+		for ((blksize=32; blksize<=1024; blksize*=2))
+		do
+			echo $APP $blksize $DIR/$input
+			$APP $blksize $DIR/$input
+		done
+	done
+done

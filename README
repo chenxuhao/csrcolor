@@ -1,0 +1,51 @@
+This is the code for sequential graph coloring on CPU and CUDA code for parallel graph coloring on GPGPUs.
+
+Variants:
+csrcolor:	graph coloring routine of NVIDIA cusparse		
+GM:			parallel graph coloring implemented on GPGPUs by Grosset et al.
+sequential:	sequential graph coloring using FirstFit strategy
+datadriven:	datadriven implementation of parallel graph coloring using FirstFit strategy
+topodriven:	topodriven implementation of parallel graph coloring using FirstFit strategy
+
+
+Requirements:
+        compute capability 3.5 and higher
+        Kepler or later GPU hardware
+        CUB v1.1.1
+
+The instructions below assume CSRCOLOR_CODE has been installed in $CSRCOLOR_CODE_DIR.
+
+Each variant directory under $CSRCOLOR_CODE_DIR/$VARIANT contains a README that
+explains what $VARIANT does, how to run it, details of implementations
+and other useful info.
+
+
+INSTALLATION
+
+You will need to download and install CUB from here:
+
+http://nvlabs.github.io/cub/
+
+Place a symlink to the top-level CUB directory in $CSRCOLOR_CODE_DIR. Assuming
+the top-level CUB directory is $CUBDIR:
+
+$ cd $CSRCOLOR_CODE_DIR
+$ ln -s $CUBDIR
+
+
+BUILDING
+
+Assuming you're in $CSRCOLOR_CODE_DIR:
+
+$ make # compiles all variants
+
+
+RUNNING
+
+Each variant directory under $CSRCOLOR_CODE_DIR contains a simple `run' script that
+runs the application with all recommended inputs.
+
+
+Authors: 
+Pingfan Li <li_pingfan@163.com>
+Xuhao Chen <cxh.nudt@gmail.com>

@@ -1,0 +1,16 @@
+topology implementation of parallel graph coloring on GPGPUs using FristFit strategy
+
+program read mtx or gr graph and store its information in CSR format
+
+and write colors of all vertices to "color.txt"
+
+program has two variants.
+
+topodriven_naive:	naive implementation without any optimization
+
+topodriven_ldg:		use __ldg to read C and R array from read_only cache
+
+
+usage:
+	./topodriven_naive <blocksize> <graph>
+	./topodriven_ldg <blocksize> <graph>

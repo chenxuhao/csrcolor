@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DIR=../input
+APP=./csrcolor
+
+for input in `ls $DIR`
+do
+	echo $APP $DIR/$input
+	$APP $DIR/$input
+done
