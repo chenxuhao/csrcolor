@@ -1,8 +1,9 @@
+Copyright 2016 Xuhao Chen, National University of Defense Technology
 This is the code for sequential graph coloring on CPU and CUDA code for parallel graph coloring on GPGPUs.
 
 Variants:
 csrcolor:	graph coloring routine of NVIDIA cusparse		
-GM:			parallel graph coloring implemented on GPGPUs by Grosset et al.
+3-step-GM:	parallel graph coloring implemented on GPGPUs by Grosset et al.
 sequential:	sequential graph coloring using FirstFit strategy
 datadriven:	datadriven implementation of parallel graph coloring using FirstFit strategy
 topodriven:	topodriven implementation of parallel graph coloring using FirstFit strategy
@@ -36,7 +37,6 @@ $ ln -s $CUBDIR
 BUILDING
 
 Assuming you're in $CSRCOLOR_CODE_DIR:
-
 $ make # compiles all variants
 
 
@@ -47,5 +47,9 @@ runs the application with all recommended inputs.
 
 
 Authors: 
-Pingfan Li <li_pingfan@163.com>
 Xuhao Chen <cxh.nudt@gmail.com>
+Pingfan Li <li_pingfan@163.com>
+
+Citations:
+Pingfan Li et al., High Performance Parallel Graph Coloring on GPGPUs, IPDPSW, 2016
+Xuhao Chen et al., Efficient and High-quality Sparse Graph Coloring on the GPU, Tech. Rep. NUDT-CS-2016-003, 2016
